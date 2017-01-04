@@ -11,8 +11,4 @@ import Foundation
 struct ScheduleDay {
     
     let sessions: [ScheduleSession]
-    
-    init(sessions: [ScheduleSession]) {
-        self.sessions = sessions
-    }
 }
