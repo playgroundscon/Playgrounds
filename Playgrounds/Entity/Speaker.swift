@@ -46,7 +46,6 @@ final class Speaker: NSObject, NSCoding {
         self.bio = bio
     }
     
-    
     struct Key {
         static let name: String = "name"
         static let location: String = "location"
@@ -54,14 +53,12 @@ final class Speaker: NSObject, NSCoding {
         static let bio: String = "bio"
     }
     
-    
     func encode(with aCoder: NSCoder) {
         aCoder.encode(name, forKey: Key.name)
         aCoder.encode(location.rawValue, forKey: Key.location)
         aCoder.encode(bio, forKey: Key.bio)
         aCoder.encode(work, forKey: Key.work)
     }
-    
     
     required convenience init(coder aDecoder: NSCoder) {
         guard
