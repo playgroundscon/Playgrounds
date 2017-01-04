@@ -32,6 +32,7 @@ enum ScheduleTime: Int {
     static let count: Int = 18
     
     init?(date: Date) {
+        // FIXME: Hardcoded
         self = .nine
     }
 }
