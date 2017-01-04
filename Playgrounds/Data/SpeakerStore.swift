@@ -26,13 +26,10 @@ struct SpeakerStore {
     }
     
     static var speakers: [Speaker] {
-        if  let data = UserDefaults.Speaker.object(forKey: .speakers) as? Data,
-            let speakers = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Speaker] {
-            
-            return speakers.sorted { $0.0.name < $0.1.name }
-        }
-        else {
-            return []
-        }
+        guard
+            let data = UserDefaults.Speaker.object(forKey: .speakers) as? Data,
+            let speakers = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Speaker] else { return [] }
+        
+        return speakers.sorted { $0.0.name < $0.1.name }
     }
 }
