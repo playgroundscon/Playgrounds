@@ -1,0 +1,170 @@
+[
+	{
+		"time": 1479532350,
+		"speaker" : {
+			"name" : "Matt Comi",
+			"image": "MattComi",
+			"work" : "Big Bucket",
+			"bio" : "Matt is an independent iOS developer based in Perth. He's the creator of the highly acclaimed iOS games The Incident and Space Age. In 2011, The Incident was included on iPhone devices in Apple Store worldwide and in 2014, Space Age was awarded Editor's Choice. When he's not making games, Matt enjoys cooking and making cocktails, usually Negronis.",
+			"location" : "Perth",
+			"links" : [
+				{
+					"type": "twitter",
+					"label": "@mattcomi",
+					"link": "http://twitter.com/mattcomi"
+				}
+			]
+		},
+		"presentation": {
+			"title": "Undecided topic",
+			"blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		}
+	},
+	{
+		"time": 1479532350,
+		"speaker" : {
+			"name" : "Chris Eidhof",
+			"image": "ChrisEidhof",
+			"work" : "objc.io",
+			"bio" : "Chris is one of the objc.io co-founders, and host of Swift Talk. He also wrote a book about Functional Swift. Before, he wrote apps such as Deckset and Scenery.",
+			"location" : "berlin",
+			"links" : [
+				{
+					"type": "twitter",
+					"label": "@chriseidhof",
+					"link": "http://twitter.com/chriseidhof"
+				}
+			]
+		},
+		"presentation": {
+			"title": "Undecided topic",
+			"blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		}
+	},
+	{
+		"time": 1479532350,
+		"speaker" : {
+			"name" : "Greg Heo",
+			"image": "GregHeo",
+			"work" : "Instagram",
+			"bio" : "Greg has been a computer nerd ever since the Commodore 64 days. He enjoys writing code, long walks thinking about code, and listening to podcasts about code. You can read his blog at Swift Unboxed.",
+			"location" : "San Francisco",
+			"links" : [
+				{
+					"type": "twitter",
+					"label": "@gregheo",
+					"link": "http://twitter.com/"
+				}
+			]
+		},
+		"presentation": {
+			"title": "Undecided topic",
+			"blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		}
+	},
+	{
+		"time": 1479532350,
+		"speaker" : {
+			"name" : "Ayaka Nonaka",
+			"image": "AyakaNonaka",
+			"work" : "Workflow",
+			"bio" : "Ayaka is an iOS engineer at Workflow and was previously at Venmo on their iOS team. In the past, she’s given talks on natural language processing in Swift, scripting in Swift, and a few other things. She writes at Learn Swift ↯ to show how powerful the language can be.",
+			"location" : "San Francisco",
+			"links" : [
+				{
+					"type": "twitter",
+					"label": "@ayakanonagon",
+					"link": "http://twitter.com/ayakanonagon"
+				}
+			]
+		},
+		"presentation": {
+			"title": "Undecided topic",
+			"blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		}
+	},
+	{
+		"time": 1479532350,
+		"speaker" : {
+			"name" : "Matt Gallagher",
+			"image": "MattGallagher",
+			"work" : "Cocoa with Love",
+			"bio" : "Matt has worked as a Mac and iOS developer and consultant for more than a decade, working across a range of fields from video server software to weather apps. His website Cocoa with Love has offered in-depth articles on Mac and iOS development since 2007.",
+			"location" : "Melbourne",
+			"links" : [
+				{
+					"type": "twitter",
+					"label": "@cocoawithlove",
+					"link": "http://twitter.com/cocoawithlove"
+				}
+			]
+		},
+		"presentation": {
+			"title": "Undecided topic",
+			"blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		}
+	},
+	{
+		"time": 1479532350,
+		"speaker" : {
+			"name" : "Erica Sadun",
+			"image": "EricaSadun",
+			"work" : "Author",
+			"bio" : "Erica is the bestselling author, coauthor, and contributor to several dozen books on programming including the widely popular The iOS Developer's Cookbook series and also blogs at ericasadun.com. In addition to being the author of dozens of iOS-native applications, Erica holds a Ph.D. in computer science.",
+			"location" : "Denver",
+			"links" : [
+				{
+					"type": "twitter",
+					"label": "@ericasadun",
+					"link": "http://twitter.com/ericasadun"
+				}
+			]
+		},
+		"presentation": {
+			"title": "Undecided Topic",
+			"blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		}
+	},
+	{
+		"time": 1479532350,
+		"speaker" : {
+			"name" : "Rachel Bobbins",
+			"image": "RachelBobbins",
+			"work" : "Stitch Fix",
+			"bio" : "Rachel is an iOS engineer at Stitch Fix in San Francisco, where she leads the customer-facing iOS team. Prior to joining Stitch Fix, she worked on a variety of iOS projects at Pivotal Labs. She's passionate about building delightful experiences, for both end-users and developers.",
+			"location" : "San Francisco",
+			"links" : [
+				{
+					"type": "twitter",
+					"label": "@bobbins",
+					"link": "http://twitter.com/bobbins"
+				}
+			]
+		},
+		"presentation": {
+			"title": "Undecided topic",
+			"blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		}
+	},
+	{
+		"time": 1479532350,
+		"speaker" : {
+			"name" : "Felix Krause",
+			"image": "FelixKrause",
+			"work" : "fastlane & Twitter",
+			"bio" : "Felix is the creator of fastlane, an open source toolchain for automating all your iOS development tasks. He recently joined Twitter where he now works full-time on open source tooling for iOS developers. Before that Felix worked at various startups in Europe and in the U.S. where he started his first steps into automating the building and submission process.",
+			"location" : "San Francisco",
+			"links" : [
+				{
+					"type": "twitter",
+					"label": "@krausefx",
+					"link": "http://twitter.com/krausefx"
+				}
+			]
+		},
+		"presentation": {
+			"title": "Undecided topic",
+			"blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		}
+	}
+]
