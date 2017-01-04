@@ -46,7 +46,7 @@ final class Speaker: NSObject, NSCoding {
         self.bio = bio
     }
     
-    struct Key {
+    fileprivate enum Key {
         static let name: String = "name"
         static let location: String = "location"
         static let work: String = "work"
