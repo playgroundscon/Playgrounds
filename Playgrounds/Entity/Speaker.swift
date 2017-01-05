@@ -47,10 +47,10 @@ final class Speaker: NSObject, NSCoding {
     }
     
     fileprivate enum Key {
-        static let name: String = "name"
-        static let location: String = "location"
-        static let work: String = "work"
-        static let bio: String = "bio"
+        static let name = "name"
+        static let location = "location"
+        static let work = "work"
+        static let bio = "bio"
     }
     
     func encode(with aCoder: NSCoder) {
