@@ -22,22 +22,19 @@ public extension RequestTestable {
             print(resource.path)
         }
         
-        
-        if let url = Bundle.main.url(forResource: resource.filename, withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url, options: .mappedIfSafe)
-                parseRequest(data: data, response: nil, log: log, completion: completion)
-            }
-            catch let error as NSError {
-                print(error)
-                print(file)
-                
-                completion(.fail(.invalidData(error)))
-            }
-        }
-        else {
+        guard let url = Bundle.main.url(forResource: resource.filename, withExtension: "json") else {
             completion(.fail(.failedInitializer))
+            return
         }
         
+        do {
+            let data = try Data(contentsOf: url, options: .mappedIfSafe)
+            parseRequest(data: data, response: nil, log: log, completion: completion)
+        } catch let error as NSError {
+            print(error)
+            print(file)
+            
+            completion(.fail(.invalidData(error)))
+        }
     }
 }

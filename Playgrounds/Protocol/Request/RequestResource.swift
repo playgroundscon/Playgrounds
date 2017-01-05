@@ -20,12 +20,11 @@ public struct RequestResource {
     }
     
     public var path: String {
-        if let path = bundle.path(forResource: filename, ofType: type) {
-            return path
-        }
-        else {
+        guard let path = bundle.path(forResource: filename, ofType: type) else {
             assertionFailure("No file exists in the project named: \(filename)")
             return ""
         }
+        
+        return path
     }
 }

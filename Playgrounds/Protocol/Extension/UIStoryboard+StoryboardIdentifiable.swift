@@ -13,22 +13,16 @@ extension UIStoryboard {
     public func instantiateInitialViewController<T: UIViewController>() -> T where T: StoryboardIdentifiable {
         let optionalViewController = instantiateInitialViewController()
         
-        if let viewController = optionalViewController as? T {
-            return viewController
-        }
-        else {
-            fatalError("Couldn’t instantiate initial view controller as \(T.storyboardIdentifier)")
-        }
+        guard let viewController = optionalViewController as? T else { fatalError("Couldn’t instantiate initial view controller as \(T.storyboardIdentifier)") }
+        
+        return viewController
     }
     
     public func instantiateViewController<T: UIViewController>() -> T where T: StoryboardIdentifiable {
-        let optionalViewController = self.instantiateViewController(withIdentifier: T.storyboardIdentifier)
+        let optionalViewController = instantiateViewController(withIdentifier: T.storyboardIdentifier)
         
-        if let viewController = optionalViewController as? T {
-            return viewController
-        }
-        else {
-            fatalError("Couldn’t instantiate view controller with identifier \(T.storyboardIdentifier)")
-        }
+        guard let viewController = optionalViewController as? T else { fatalError("Couldn’t instantiate view controller with identifier \(T.storyboardIdentifier)") }
+        
+        return viewController
     }
 }

@@ -46,6 +46,8 @@ public extension Requestable {
             }
             else if let data = data {
                 self.parseRequest(data: data, response: response, log: log, completion: completion)
+            } else {
+                fatalError("An unknown network error occurred.")
             }
         }
         .resume()
@@ -62,8 +64,7 @@ public extension Requestable {
         DispatchQueue.main.async {
             if let error = error {
                 completion(.fail(.invalidData(error)))
-            }
-            else {
+            } else {
                 if log { print(json) }
                 
                 completion(.success(json))
@@ -80,13 +81,11 @@ public extension Requestable {
         do {
             let httpBody = try JSONSerialization.data(withJSONObject: parameters)
             return httpBody
-        }
-        catch let error as NSError {
+        } catch let error as NSError {
             print(error)
             assertionFailure()
             return nil
-        }
-        catch let data as Data {
+        } catch let data as Data {
             return data
         }
     }
