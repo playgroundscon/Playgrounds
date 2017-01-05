@@ -17,6 +17,7 @@ final class DetailTextCell: TableViewCell, NibLoadable {
         }
         
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none

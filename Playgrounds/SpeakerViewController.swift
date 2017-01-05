@@ -70,7 +70,7 @@ extension SpeakerViewController: UITableViewDelegate {
     }
 }
 
-extension SpeakerViewController : SegueHandler {
+extension SpeakerViewController: SegueHandler {
     enum Segue: String {
         case speaker
     }

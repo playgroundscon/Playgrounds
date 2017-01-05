@@ -46,14 +46,12 @@ final class Speaker: NSObject, NSCoding {
         self.bio = bio
     }
     
-    
-    struct Key {
-        static let name: String = "name"
-        static let location: String = "location"
-        static let work: String = "work"
-        static let bio: String = "bio"
+    fileprivate enum Key {
+        static let name = "name"
+        static let location = "location"
+        static let work = "work"
+        static let bio = "bio"
     }
-    
     
     func encode(with aCoder: NSCoder) {
         aCoder.encode(name, forKey: Key.name)
@@ -62,7 +60,6 @@ final class Speaker: NSObject, NSCoding {
         aCoder.encode(work, forKey: Key.work)
     }
     
-    
     required convenience init(coder aDecoder: NSCoder) {
         guard
             let name = aDecoder.decodeObject(forKey: Key.name) as? String,
@@ -70,7 +67,7 @@ final class Speaker: NSObject, NSCoding {
             let bio = aDecoder.decodeObject(forKey: Key.bio) as? String,
             let locationValue = aDecoder.decodeObject(forKey: Key.location) as? String,
             let location = Location(rawValue: locationValue)
-            else { fatalError() }
+            else { fatalError("Could not decode object `Speaker`.") }
 
         self.init(name: name, location: location, work: work, bio: bio)
     }

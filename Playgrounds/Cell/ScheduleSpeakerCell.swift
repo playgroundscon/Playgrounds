@@ -10,8 +10,6 @@ import UIKit
 
 final class ScheduleSpeakerCell: TableViewCell, NibLoadable {
 
-    // MARK: - IBOutlets
-    
     @IBOutlet weak var avatarImageView: UIImageView!
     
     @IBOutlet weak var headingLabel: UILabel! { didSet {
@@ -25,9 +23,6 @@ final class ScheduleSpeakerCell: TableViewCell, NibLoadable {
         }
     }
     
-    
-    // MARK: - View Lifecycle
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         avatarImageView.circular()
@@ -37,6 +32,6 @@ final class ScheduleSpeakerCell: TableViewCell, NibLoadable {
 extension ScheduleSpeakerCell: DefaultableHeight {
     
     static var defaultHeight: CGFloat {
-        return 64
+        return 64.0
     }
 }

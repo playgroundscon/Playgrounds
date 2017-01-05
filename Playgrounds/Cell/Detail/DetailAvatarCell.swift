@@ -33,8 +33,9 @@ final class DetailAvatarCell: TableViewCell, NibLoadable {
     }
 }
 
-extension DetailAvatarCell : DefaultableHeight {
+extension DetailAvatarCell: DefaultableHeight {
+    
     static var defaultHeight: CGFloat {
-        return 84
+        return 84.0
     }
 }

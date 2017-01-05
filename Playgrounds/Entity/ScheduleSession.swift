@@ -20,6 +20,9 @@ struct ScheduleSession {
         self.speaker = Speaker()
         self.presentation = Presentation()
     }
+}
+
+extension ScheduleSession {
     
     init?(json: JSON) {
         guard

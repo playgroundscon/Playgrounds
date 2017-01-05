@@ -13,7 +13,7 @@ fileprivate extension SpeakerDetailViewController {
         case avatar
         case bio
         case contact
-        static let count: Int = 3
+        static let count = 3
     }
 }
 
@@ -22,7 +22,6 @@ final class SpeakerDetailViewController: UIViewController {
     // MARK: - Properties
     
     var speaker: Speaker!
-    
     
     // MARK: - IBOutlets
     
@@ -60,10 +59,8 @@ extension SpeakerDetailViewController: UITableViewDataSource {
         switch section {
         case .avatar:
             return 1
-            
         case .bio:
             return 1
-            
         case .contact:
             return 2
         }
@@ -75,7 +72,6 @@ extension SpeakerDetailViewController: UITableViewDataSource {
         switch section {
         case .avatar, .bio:
             return nil
-            
         case .contact:
             return "Links"
         }
@@ -93,13 +89,11 @@ extension SpeakerDetailViewController: UITableViewDataSource {
             cell.avatarImageView.image = UIImage(named: resource)
             
             return cell
-            
         case .bio:
             let cell: DetailTextCell = tableView.dequeueReusableCell(for: indexPath)
             cell.descriptionTextLabel.text = speaker.bio
             
             return cell
-            
         case .contact:
             let cell: DetailLinksCell = tableView.dequeueReusableCell(for: indexPath)
             cell.headingLabel.text = "@AndyyHope"
@@ -118,9 +112,8 @@ extension SpeakerDetailViewController: UITableViewDelegate {
         switch section {
         case .avatar, .bio:
             return .min
-            
         case .contact:
-            return 30
+            return 30.0
         }
     }
     
@@ -129,10 +122,8 @@ extension SpeakerDetailViewController: UITableViewDelegate {
         switch section {
         case .avatar:
             return DetailAvatarCell.defaultHeight
-            
         case .bio:
             return UITableViewAutomaticDimension
-            
         case .contact:
             return DetailLinksCell.defaultHeight
         }
@@ -145,9 +136,8 @@ extension SpeakerDetailViewController: UITableViewDelegate {
         switch section {
         case .avatar:
             return .min
-            
         case .bio, .contact:
-            return 10
+            return 10.0
         }
     }
     
@@ -156,10 +146,8 @@ extension SpeakerDetailViewController: UITableViewDelegate {
         switch section {
         case .avatar:
             return DetailAvatarCell.defaultHeight
-            
         case .bio:
-            return 30
-            
+            return 30.0
         case .contact:
             return DetailLinksCell.defaultHeight
         }

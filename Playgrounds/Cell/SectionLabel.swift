@@ -20,13 +20,12 @@ final class SectionLabel: UILabel {
     }
     
     override func drawText(in rect: CGRect) {
-        
         let insets = UIEdgeInsets(top: 8, left: 16, bottom: 0, right: 0)
         super.drawText(in: UIEdgeInsetsInsetRect(rect, insets))
     }
     
     private func style() {
-        font = UIFont.systemFont(ofSize: 12)
+        font = .systemFont(ofSize: 12)
         textColor = .gray
         backgroundColor = .interface(.foreground)
     }

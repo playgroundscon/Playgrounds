@@ -25,7 +25,6 @@ struct AppearanceController {
         navigationBar.titleTextAttributes = [
             NSForegroundColorAttributeName : UIColor.text(.primary)]
         
-        
         // Tab Bar
         
         var tabBar: UITabBar {
@@ -36,15 +35,10 @@ struct AppearanceController {
         tabBar.unselectedItemTintColor = .text(.secondary)
         tabBar.barTintColor = .playgrounds(.secondary)
         
-        
         // Tab Bar Item
         
         var tabBarItem: UITabBarItem {
             return UITabBarItem.appearance()
         }
-        
-        
-        
-        
     }
 }

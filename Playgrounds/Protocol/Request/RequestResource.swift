@@ -9,7 +9,7 @@
 import Foundation
 
 public struct RequestResource {
-    private let type: String = "json"
+    private let type = "json"
     
     public let filename: String
     public let bundle: Bundle
@@ -20,12 +20,11 @@ public struct RequestResource {
     }
     
     public var path: String {
-        if let path = bundle.path(forResource: filename, ofType: type) {
-            return path
-        }
-        else {
+        guard let path = bundle.path(forResource: filename, ofType: type) else {
             assertionFailure("No file exists in the project named: \(filename)")
             return ""
         }
+        
+        return path
     }
 }

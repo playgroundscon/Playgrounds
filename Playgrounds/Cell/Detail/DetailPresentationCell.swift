@@ -31,6 +31,6 @@ final class DetailPresentationCell: TableViewCell, NibLoadable {
 extension DetailPresentationCell: DefaultableHeight {
     
     static var defaultHeight: CGFloat {
-        return 88
+        return 88.0
     }
 }

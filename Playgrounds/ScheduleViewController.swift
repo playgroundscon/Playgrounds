@@ -25,7 +25,6 @@ final class ScheduleViewController: UIViewController {
     
     weak var delegate: ScheduleViewControllerDelegate?
     
-    
     // MARK: - IBOUtlets
     
     @IBOutlet weak var tableView: UITableView!
@@ -49,12 +48,12 @@ final class ScheduleViewController: UIViewController {
     // MARK: - Selector
     
     @objc fileprivate func daySegmentedControlValueChanged(_ sender: UISegmentedControl) {
-        if let day = Schedule.Day(rawValue: sender.selectedSegmentIndex) {
-            delegate?.switchDataSource(for: day)
-        }
-        else {
+        guard let day = Schedule.Day(rawValue: sender.selectedSegmentIndex) else {
             assertionFailure("Out of bounds segment index")
+            return
         }
+        
+        delegate?.switchDataSource(for: day)
     }
 }
 

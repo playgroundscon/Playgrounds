@@ -28,9 +28,7 @@ extension PresentationsFridayDataSource: UITableViewDataSource {
         let session = day.sessions[indexPath.section]
         let speaker = session.speaker
         cell.headingLabel.text = "\(session.presentation.title)\n\(speaker.name)"
-        cell.avatarImageView.backgroundColor = indexPath.section % 2 == 0
-            ? .gray
-            : .lightGray
+        cell.avatarImageView.backgroundColor = (indexPath.section % 2 == 0) ? .gray : .lightGray
         
         return cell
     }
