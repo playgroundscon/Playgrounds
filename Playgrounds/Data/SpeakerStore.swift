@@ -10,7 +10,7 @@ import Foundation
 
 fileprivate extension UserDefaults {
     
-    struct Speaker: ObjectUserDefaultable {
+    enum Speaker: ObjectUserDefaultable {
         
         enum ObjectDefaultKey: String {
             case speakers
