@@ -12,7 +12,7 @@ fileprivate extension PresentationDetailViewController {
     
     enum Section: Int {
         case presentation, speaker, links
-        static let count: Int = 3
+        static let count = 3
     }
 }
 
@@ -21,7 +21,6 @@ final class PresentationDetailViewController: UIViewController {
     // MARK: - Properties
     
     var session: ScheduleSession!
-    
 
     // MARK: - IBOutlets
     
@@ -54,13 +53,11 @@ extension PresentationDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let index = section
-        guard let section = Section(rawValue: index) else { return 0 }
+        guard let section = Section(rawValue: section) else { return 0 }
         
         switch section {
         case .presentation, .speaker:
             return 1
-            
         case .links:
             return 3
         }
@@ -77,7 +74,6 @@ extension PresentationDetailViewController: UITableViewDataSource {
             cell.bodyLabel.text = presentation.blurb
             
             return cell
-            
         case .speaker:
             let cell: DetailAvatarCell = tableView.dequeueReusableCell(for: indexPath)
             let speaker = session.speaker
@@ -85,7 +81,6 @@ extension PresentationDetailViewController: UITableViewDataSource {
             cell.subheadingLabel.text = "\(speaker.work), \(speaker.location.rawValue)"
             
             return cell
-            
         case .links:
             let cell: DetailLinksCell = tableView.dequeueReusableCell(for: indexPath)
             let speaker = session.speaker
@@ -107,43 +102,36 @@ extension PresentationDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let index = section
-        guard let section = Section(rawValue: index) else { return nil }
+        guard let section = Section(rawValue: section) else { return nil }
         
         switch section {
         case .presentation, .links:
             return nil
-            
         case .speaker:
             return "Presented by"
         }
     }
-    
-    
 }
 
 extension PresentationDetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        let index = section
-        guard let section = Section(rawValue: index) else { return .min }
+        guard let section = Section(rawValue: section) else { return .min }
         
         switch section {
         case .presentation, .links:
             return .min
-            
         case .speaker:
-            return 30
+            return 30.0
         }
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        let index = section
-        guard let section = Section(rawValue: index) else { return .min }
+        guard let section = Section(rawValue: section) else { return .min }
         
         switch section {
         case .presentation, .links:
-            return 20
+            return 20.0
             
         case .speaker:
             return .min
@@ -151,26 +139,22 @@ extension PresentationDetailViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        guard let section = Section(rawValue: indexPath.section) else { return 0 }
+        guard let section = Section(rawValue: indexPath.section) else { return 0.0 }
         switch section {
-            
         case .presentation, .speaker:
             return UITableViewAutomaticDimension
-            
         case .links:
             return DetailLinksCell.defaultHeight
         }
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        guard let section = Section(rawValue: indexPath.section) else { return 0 }
+        guard let section = Section(rawValue: indexPath.section) else { return 0.0 }
         switch section {
         case .presentation:
             return DetailAvatarCell.defaultHeight
-            
         case .speaker:
-            return 100
-            
+            return 100.0
         case .links:
             return DetailLinksCell.defaultHeight
         }

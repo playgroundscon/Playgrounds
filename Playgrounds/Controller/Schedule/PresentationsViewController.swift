@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 fileprivate extension Selector {
     static let filterSegmentedControlValueChanged = #selector(PresentationsViewController.filterSegmentedControlValueChanged(_:))
 }
@@ -69,7 +68,6 @@ final class PresentationsViewController: UIViewController {
             case .success(let sessions):
                 self.thursdayDataSource.day = ScheduleDay(sessions: sessions)
                 self.tableView.reloadData()
-                
             case .fail:
                 break
             }
@@ -94,6 +92,7 @@ extension PresentationsViewController: ScheduleViewControllerDelegate {
     }
     
     func filterDataSource(for filter: Schedule.Filter) {
+        // FIXME: Implement filter
         switch filter {
         case .none:
             print("No filter")
@@ -110,31 +109,31 @@ extension PresentationsViewController: ScheduleViewControllerDelegate {
     }
     
     func title(forSection section: Int) -> String {
-        
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH:mma"
+        dateFormatter.timeStyle = .short
         
         
         switch day {
         case .thursday:
-        let timeInterval = TimeInterval(thursdayDataSource.day.sessions[section].time.rawValue)
-        let date = Date(timeIntervalSince1970: timeInterval)
-        return dateFormatter.string(from: date)
-            
-        case .friday: return ""
+            // TODO: Does this work as intended?
+            let timeInterval = TimeInterval(thursdayDataSource.day.sessions[section].time.rawValue)
+            let date = Date(timeIntervalSince1970: timeInterval)
+            return dateFormatter.string(from: date)
+        case .friday:
+            // TODO: Return title for friday
+            return ""
         }
     }
-    
     
     // MARK: - Selectors
     
     @objc fileprivate func filterSegmentedControlValueChanged(_ sender: UISegmentedControl) {
-        if let filter = Schedule.Filter(rawValue: sender.selectedSegmentIndex) {
-            filterDataSource(for: filter)
-        }
-        else {
+        guard let filter = Schedule.Filter(rawValue: sender.selectedSegmentIndex) else {
             assertionFailure("Out of bounds segment index")
+            return
         }
+        
+        filterDataSource(for: filter)
     }
 }
 
@@ -143,7 +142,6 @@ extension PresentationsViewController: SegueHandler {
     enum Segue: String {
         case contained, details
     }
-
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -152,7 +150,6 @@ extension PresentationsViewController: SegueHandler {
             guard let viewController = segue.destination as? ScheduleViewController else { return }
             
             scheduleViewController = viewController
-            
         case .details:
             guard let viewController = segue.destination as? PresentationDetailViewController else { return }
             
