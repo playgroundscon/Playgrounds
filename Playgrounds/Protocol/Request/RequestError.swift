@@ -7,7 +7,7 @@
 //
 import Foundation
 
-public enum RequestError : Error {
+public enum RequestError: Error {
     case failedInitializer
     case session(NSError)
     case invalidData(NSError)
@@ -20,7 +20,7 @@ public enum RequestError : Error {
                     domain: "JSON",
                     code: 1,
                     userInfo: [
-                        NSLocalizedDescriptionKey : "One of the keys required in a JSON initializer was missing"])
+                        NSLocalizedDescriptionKey: "One of the keys required in a JSON initializer was missing"])
             print(error)
         
         case .session(let error):

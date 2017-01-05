@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-public typealias Parameters = [String : AnyObject]
+public typealias Parameters = [String: AnyObject]
 
 public protocol Requestable {
     static func request(url: URL, parameters: Parameters?, log: Bool, function: String, file: String, completion: @escaping RequestResponse<JSON>.Completion)
@@ -28,7 +28,7 @@ public extension Requestable {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
-        session.dataTask(with: request) { (data, response, error) in
+        session.dataTask(with: request) { data, response, error in
             
             if log {
                 print(file)
@@ -78,7 +78,7 @@ public extension Requestable {
         guard let parameters = parameters else { return nil }
         
         do {
-            let httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
+            let httpBody = try JSONSerialization.data(withJSONObject: parameters)
             return httpBody
         }
         catch let error as NSError {

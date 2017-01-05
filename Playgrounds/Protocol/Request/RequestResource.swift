@@ -9,7 +9,7 @@
 import Foundation
 
 public struct RequestResource {
-    private let type: String = "json"
+    private let type = "json"
     
     public let filename: String
     public let bundle: Bundle
