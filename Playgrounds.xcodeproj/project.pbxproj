@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		665A33AE1DE01CF30019F58F /* UIImage+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665A33AD1DE01CF30019F58F /* UIImage+Utilities.swift */; };
 		669BDBF51DE0244B0036DD9E /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669BDBF01DE0244B0036DD9E /* Requestable.swift */; };
 		669BDBF61DE0244B0036DD9E /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669BDBF11DE0244B0036DD9E /* RequestError.swift */; };
 		669BDBF71DE0244B0036DD9E /* RequestResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669BDBF21DE0244B0036DD9E /* RequestResource.swift */; };
@@ -72,7 +71,6 @@
 
 /* Begin PBXFileReference section */
 		0590C0D9027CF373FDF7F74C /* Pods-Playgrounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playgrounds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Playgrounds/Pods-Playgrounds.debug.xcconfig"; sourceTree = "<group>"; };
-		665A33AD1DE01CF30019F58F /* UIImage+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Utilities.swift"; path = "Extension/UIImage+Utilities.swift"; sourceTree = "<group>"; };
 		669BDBF01DE0244B0036DD9E /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		669BDBF11DE0244B0036DD9E /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		669BDBF21DE0244B0036DD9E /* RequestResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResource.swift; sourceTree = "<group>"; };
@@ -265,7 +263,6 @@
 			isa = PBXGroup;
 			children = (
 				66C90A811DDFCB2300126756 /* UIView+Utilities.swift */,
-				665A33AD1DE01CF30019F58F /* UIImage+Utilities.swift */,
 				66C90A961DE0029200126756 /* CGFloat+Utilities.swift */,
 				669BDC061DE03A8A0036DD9E /* UIColor+Utilities.swift */,
 			);
@@ -524,7 +521,6 @@
 				66C90A361DDF08CA00126756 /* SpeakerViewController.swift in Sources */,
 				66C90A701DDF1C6200126756 /* Location.swift in Sources */,
 				66C90A321DDF08CA00126756 /* AppDelegate.swift in Sources */,
-				665A33AE1DE01CF30019F58F /* UIImage+Utilities.swift in Sources */,
 				669BDBF81DE0244B0036DD9E /* RequestResponse.swift in Sources */,
 				66C90A481DDF0D2200126756 /* PresentationsFridayDataSource.swift in Sources */,
 				669BDBF71DE0244B0036DD9E /* RequestResource.swift in Sources */,
