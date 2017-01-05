@@ -67,7 +67,7 @@ final class Speaker: NSObject, NSCoding {
             let bio = aDecoder.decodeObject(forKey: Key.bio) as? String,
             let locationValue = aDecoder.decodeObject(forKey: Key.location) as? String,
             let location = Location(rawValue: locationValue)
-            else { fatalError() }
+            else { fatalError("Could not decode object `Speaker`.") }
 
         self.init(name: name, location: location, work: work, bio: bio)
     }
