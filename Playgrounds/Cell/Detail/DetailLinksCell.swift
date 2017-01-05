@@ -10,8 +10,6 @@ import UIKit
 
 final class DetailLinksCell: TableViewCell, NibLoadable {
 
-    // MARK: - IBOutlets
-    
     @IBOutlet weak var iconImageView: UIImageView! { didSet {
         iconImageView.backgroundColor = .gray
         }
@@ -22,16 +20,14 @@ final class DetailLinksCell: TableViewCell, NibLoadable {
         }
     }
     
-    
-    // MARK: - View Lifecycle
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 }
 
 extension DetailLinksCell: DefaultableHeight {
+    
     static var defaultHeight: CGFloat {
-        return 44
+        return 44.0
     }
 }

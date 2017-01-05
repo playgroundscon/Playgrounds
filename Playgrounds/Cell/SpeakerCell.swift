@@ -10,8 +10,6 @@ import UIKit
 
 final class SpeakerCell: TableViewCell, NibLoadable {
 
-    // MARK: - IBOutlets
-    
     @IBOutlet weak var headingLabel: UILabel! { didSet {
         headingLabel.textColor = .text(.heading)
         }
@@ -24,8 +22,6 @@ final class SpeakerCell: TableViewCell, NibLoadable {
     
     @IBOutlet weak var avatarImageView: UIImageView!
     
-    // MARK: - View Lifecycle
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -34,6 +30,6 @@ final class SpeakerCell: TableViewCell, NibLoadable {
 extension SpeakerCell: DefaultableHeight {
     
     static var defaultHeight: CGFloat {
-        return 64
+        return 64.0
     }
 }

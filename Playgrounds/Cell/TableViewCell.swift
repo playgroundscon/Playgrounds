@@ -12,7 +12,7 @@ class TableViewCell: UITableViewCell {
     
     static let defaultIndent: CGFloat = 16.0
     
-    var indent: CGFloat = 0
+    var indent: CGFloat = 0.0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,10 +24,10 @@ class TableViewCell: UITableViewCell {
         guard let context: CGContext = UIGraphicsGetCurrentContext() else { return }
         
         let strokeWidth: CGFloat = 0.5
-        let yPos: CGFloat = rect.maxY - strokeWidth
-        let xPos: CGFloat = indent
-        let width: CGFloat = rect.width - xPos
-        let strokeColor: UIColor = UIColor(white: 0.5, alpha: 0.4)
+        let yPos = rect.maxY - strokeWidth
+        let xPos = indent
+        let width = rect.width - xPos
+        let strokeColor = UIColor(white: 0.5, alpha: 0.4)
         
         context.setStrokeColor(strokeColor.cgColor)
         context.setLineWidth(strokeWidth)
