@@ -33,14 +33,13 @@ final class PresentationDetailViewController: UIViewController {
         tableView.register(DetailLinksCell.self)
         }
     }
-
-    
     
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = session.presentation.title
         automaticallyAdjustsScrollViewInsets = false
     }
 }

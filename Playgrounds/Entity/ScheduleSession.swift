@@ -14,12 +14,6 @@ struct ScheduleSession {
     let time: ScheduleTime
     let speaker: Speaker
     let presentation: Presentation
-    
-    init(time: ScheduleTime) {
-        self.time = time
-        self.speaker = Speaker()
-        self.presentation = Presentation()
-    }
 }
 
 extension ScheduleSession {

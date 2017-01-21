@@ -42,7 +42,7 @@ final class Link: NSObject, NSCoding {
     }
     
     enum `Type`: String {
-        case twitter
+        case twitter, website
     }
     
     let type: Type
