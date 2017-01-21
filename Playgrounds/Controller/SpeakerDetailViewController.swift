@@ -85,8 +85,7 @@ extension SpeakerDetailViewController: UITableViewDataSource {
             let cell: DetailAvatarCell = tableView.dequeueReusableCell(for: indexPath)
             cell.headingLabel.text = speaker.name
             cell.subheadingLabel.text = "\(speaker.work), \(speaker.location.rawValue)"
-            let resource = speaker.name.replacingOccurrences(of: " ", with: "")
-            cell.avatarImageView.image = UIImage(named: resource)
+            cell.avatarImageView.image = UIImage(named: speaker.resource)
             
             return cell
         case .bio:

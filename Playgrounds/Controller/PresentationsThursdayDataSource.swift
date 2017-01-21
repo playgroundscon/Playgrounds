@@ -29,8 +29,7 @@ extension PresentationsThursdayDataSource: UITableViewDataSource {
         let speaker = session.speaker
         cell.headingLabel.text = session.presentation.title
         cell.subheadingLabel.text = speaker.name
-        let resource = speaker.name.replacingOccurrences(of: " ", with: "")
-        cell.avatarImageView.image = UIImage(named: resource)
+        cell.avatarImageView.image = UIImage(named: speaker.resource)
         
         return cell
     }

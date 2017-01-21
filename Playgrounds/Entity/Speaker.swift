@@ -17,6 +17,10 @@ final class Speaker: NSObject, NSCoding {
     let bio: String
     let links: [Link]
     
+    var resource: String {
+        return name.replacingOccurrences(of: " ", with: "")
+    }
+    
     override init() {
         self.name = "Andyy Hope"
         self.location = .melbourne
