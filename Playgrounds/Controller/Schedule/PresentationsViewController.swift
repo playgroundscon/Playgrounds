@@ -50,6 +50,7 @@ final class PresentationsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        // FIXME: Also add friday's data source.
         tableView.dataSource = thursdayDataSource
         scheduleViewController.delegate = self
         tableView.register(ScheduleSpeakerCell.self)
@@ -105,7 +106,7 @@ extension PresentationsViewController: ScheduleViewControllerDelegate {
     // MARK: - Navigation {
     
     func prepareSegue(for indexPath: IndexPath) {
-        performSegue(.details, sender: self)
+        performSegue(.details, sender: indexPath)
     }
     
     func title(forSection section: Int) -> String {
@@ -151,9 +152,12 @@ extension PresentationsViewController: SegueHandler {
             
             scheduleViewController = viewController
         case .details:
-            guard let viewController = segue.destination as? PresentationDetailViewController else { return }
+            guard
+                let viewController = segue.destination as? PresentationDetailViewController,
+                let indexPath = sender as? IndexPath else { return }
             
-            viewController.session = ScheduleSession(time: .eleven)
+            // FIXME: Don't rely on thursdayDataSource directly (?)
+            viewController.session = thursdayDataSource.day.sessions[indexPath.section]
         }
     }
 }
