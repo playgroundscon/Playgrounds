@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		498D1B431E3358A500F3E34F /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D1B421E3358A500F3E34F /* Link.swift */; };
 		669BDBF51DE0244B0036DD9E /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669BDBF01DE0244B0036DD9E /* Requestable.swift */; };
 		669BDBF61DE0244B0036DD9E /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669BDBF11DE0244B0036DD9E /* RequestError.swift */; };
 		669BDBF71DE0244B0036DD9E /* RequestResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669BDBF21DE0244B0036DD9E /* RequestResource.swift */; };
@@ -71,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		0590C0D9027CF373FDF7F74C /* Pods-Playgrounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playgrounds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Playgrounds/Pods-Playgrounds.debug.xcconfig"; sourceTree = "<group>"; };
+		498D1B421E3358A500F3E34F /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		669BDBF01DE0244B0036DD9E /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		669BDBF11DE0244B0036DD9E /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		669BDBF21DE0244B0036DD9E /* RequestResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResource.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				66C90A6D1DDF1B9A00126756 /* Speaker.swift */,
 				66C90A6F1DDF1C6200126756 /* Location.swift */,
 				66C90A891DDFD17700126756 /* Schedule.swift */,
+				498D1B421E3358A500F3E34F /* Link.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				66C90A7E1DDFB81F00126756 /* PresentationDetailViewController.swift in Sources */,
 				66C90A721DDF1CE800126756 /* ScheduleDay.swift in Sources */,
 				66C90A601DDF177000126756 /* UICollectionView+ReusableView.swift in Sources */,
+				498D1B431E3358A500F3E34F /* Link.swift in Sources */,
 				66A4F83B1DE125CF00A58AD4 /* SectionLabel.swift in Sources */,
 				66C90A8A1DDFD17700126756 /* Schedule.swift in Sources */,
 				66C90A651DDF177000126756 /* UIViewController+ProtocolExtensions.swift in Sources */,
