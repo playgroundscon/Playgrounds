@@ -89,9 +89,9 @@ extension PresentationDetailViewController: UITableViewDataSource {
                 case 0:
                     return "Read about \(speaker.name)"
                 case 1:
-                    return "@andyyhope"
+                    return speaker.twitter?.label ?? "No Twitter"
                 case 2:
-                    return "andyyhope.com"
+                    return speaker.website?.label ?? "No website"
                 default:
                     return nil
                 }
