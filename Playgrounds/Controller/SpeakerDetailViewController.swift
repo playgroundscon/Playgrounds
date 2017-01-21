@@ -41,7 +41,7 @@ final class SpeakerDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Speaker"
+        title = speaker.name
         automaticallyAdjustsScrollViewInsets = false
     }
 }
@@ -62,7 +62,7 @@ extension SpeakerDetailViewController: UITableViewDataSource {
         case .bio:
             return 1
         case .contact:
-            return 2
+            return speaker.links.count
         }
     }
     
@@ -96,7 +96,7 @@ extension SpeakerDetailViewController: UITableViewDataSource {
             return cell
         case .contact:
             let cell: DetailLinksCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.headingLabel.text = "@AndyyHope"
+            cell.headingLabel.text = speaker.links[indexPath.row].label
             
             return cell
         }
