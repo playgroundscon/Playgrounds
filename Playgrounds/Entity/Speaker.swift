@@ -17,6 +17,18 @@ final class Speaker: NSObject, NSCoding {
     let bio: String
     let links: [Link]
     
+    var twitter: Link? {
+        return links.filter { $0.type == .twitter }.first
+    }
+    
+    var website: Link? {
+        return links.filter { $0.type == .website }.first
+    }
+    
+    var resource: String {
+        return name.replacingOccurrences(of: " ", with: "")
+    }
+    
     override init() {
         self.name = "Andyy Hope"
         self.location = .melbourne

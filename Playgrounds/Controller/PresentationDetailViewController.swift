@@ -78,6 +78,7 @@ extension PresentationDetailViewController: UITableViewDataSource {
             let speaker = session.speaker
             cell.headingLabel.text = speaker.name
             cell.subheadingLabel.text = "\(speaker.work), \(speaker.location.rawValue)"
+            cell.avatarImageView.image = UIImage(named: speaker.resource)
             
             return cell
         case .links:
@@ -88,9 +89,9 @@ extension PresentationDetailViewController: UITableViewDataSource {
                 case 0:
                     return "Read about \(speaker.name)"
                 case 1:
-                    return "@andyyhope"
+                    return speaker.twitter?.label ?? "No Twitter"
                 case 2:
-                    return "andyyhope.com"
+                    return speaker.website?.label ?? "No website"
                 default:
                     return nil
                 }
@@ -140,10 +141,12 @@ extension PresentationDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard let section = Section(rawValue: indexPath.section) else { return 0.0 }
         switch section {
-        case .presentation, .speaker:
+        case .presentation:
             return UITableViewAutomaticDimension
         case .links:
             return DetailLinksCell.defaultHeight
+        case .speaker:
+            return DetailAvatarCell.defaultHeight
         }
     }
     

@@ -52,9 +52,8 @@ extension SpeakerViewController: UITableViewDataSource {
         let speaker = speakers[indexPath.row]
         cell.headingLabel.text = speaker.name
         cell.subheadingLabel.text = speaker.work
-        cell.avatarImageView.cornerRadius = 48/2
-        let resource = speaker.name.replacingOccurrences(of: " ", with: "")
-        cell.avatarImageView.image = UIImage(named: resource)
+        cell.avatarImageView.cornerRadius = 48 / 2
+        cell.avatarImageView.image = UIImage(named: speaker.resource)
         return cell
     }
 }
